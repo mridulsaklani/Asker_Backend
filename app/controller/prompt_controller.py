@@ -8,6 +8,7 @@ from openai import OpenAI
 from gtts import gTTS
 
 
+
 logging.basicConfig(level=logging.INFO)
 
 load_dotenv()
