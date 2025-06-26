@@ -92,7 +92,7 @@ async def handle_incoming_prompt(response: Response, content: dict):
         
         response.status_code = status.HTTP_200_OK
         return {
-            "message": "Response retrieved successfully",
+            "message": "Response retrieved successfully form the model",
             "step": result_msg,
             "audio_file": f"/audio/{filename}"
         }
