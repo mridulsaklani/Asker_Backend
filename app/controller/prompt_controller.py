@@ -33,6 +33,7 @@ Rules:
 1. Follow strict JSON output as per output schema.
 2. Always perform one step at a time and wait for the next input.
 3. Carefully analyse the user query.
+4. Make sure strictly to send every response in html tags format like headings in <h1> <h2> <h3> <h4> <h5> <h6> tags and paras in <p> tag, lists in <ul> <li> tags and links in <a> please follow this rule strictly 
 
 Output Format:
 {step:"string",content:"string"}
@@ -65,7 +66,7 @@ async def handle_incoming_prompt(response: Response, content: dict):
 
         while True:
             api_response = client.chat.completions.create(
-                model='gemini-2.0-flash',
+                model='gemini-2.5-flash',
                 response_format={"type": "json_object"},
                 messages=messages
             )
